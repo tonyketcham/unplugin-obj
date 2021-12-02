@@ -1,7 +1,7 @@
 {
   "name": "unplugin-obj",
   "version": "0.1.0",
-  "description": "Import .obj files as strings 🧵",
+  "description": "Import .obj files as strings 🧵 in Vite, Rollup, Webpack + more",
   "keywords": [
     "unplugin",
     "vite",
@@ -9,6 +9,7 @@
     "rollup",
     "transform",
     "three.js",
+    "svelte-cubed",
     "obj",
     "obj-loader",
     "obj-file"
@@ -16,6 +17,11 @@
   "homepage": "https://github.com/tonyketcham/unplugin-obj#readme",
   "bugs": {
     "url": "https://github.com/tonyketcham/unplugin-obj/issues"
+  },
+  "author": {
+    "name": "Tony Ketcham",
+    "email": "ketcham.dev@gmail.com",
+    "url": "https://github.com/tonyketcham"
   },
   "repository": {
     "type": "git",
