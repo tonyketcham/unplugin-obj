@@ -23,7 +23,7 @@ console.log(obj);
 ## Install
 
 ```bash
-pnpm i unplugin-obj
+pnpm i -D unplugin-obj
 ```
 
 ### Vite
