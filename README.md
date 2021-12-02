@@ -1,6 +1,6 @@
 # unplugin-obj
 
-<!-- [![NPM version](https://img.shields.io/npm/v/unplugin-obj?color=a1b858&label=)](https://www.npmjs.com/package/unplugin-obj) -->
+[![NPM version](https://img.shields.io/npm/v/unplugin-obj?color=a1b858&label=)](https://www.npmjs.com/package/unplugin-obj)
 
 An [`.obj`](https://en.wikipedia.org/wiki/Wavefront_.obj_file) file import plugin for Vite, Rollup, and Webpack; built with [unplugin](https://github.com/unjs/unplugin). This gives you a sweet and simple way to import an `.obj` file as a string to, for example, parse into a mesh in something like [three.js](https://threejs.org/), or do whatever you want with.
 
