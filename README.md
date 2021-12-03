@@ -60,6 +60,28 @@ module.exports = {
 };
 ```
 
+### SvelteKit
+
+```ts
+// svelte.config.js
+/* ... */
+import ObjFileImport from 'unplugin-obj/vite';
+
+/** @type {import('@sveltejs/kit').Config} */
+const config = {
+  /* ... */
+  kit: {
+    /* ... */
+    vite: {
+      /* ... */
+      plugins: [ObjFileImport()],
+    },
+  },
+};
+
+export default config;
+```
+
 ### Nuxt
 
 ```ts
