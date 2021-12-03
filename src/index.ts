@@ -1,5 +1,4 @@
 import { createUnplugin } from 'unplugin';
-import fs from 'fs/promises';
 
 /**
  * Bundler-agnostic plugin for importing .obj files as strings.
@@ -9,21 +8,27 @@ export default createUnplugin(() => {
 
   return {
     name: 'unplugin-obj',
-    resolveId(id) {
+    resolveId(id: string) {
       if (id.match(objRegex)) {
         return id;
       }
     },
-    async load(id) {
-      if (!id.match(objRegex)) {
-        return;
+    transform(src: string, id: string) {
+      if (id.endsWith('.obj')) {
+        const contents = String.raw`${src}`;
+
+        return {
+          code: getCode(contents),
+          map: null,
+        };
       }
-
-      const [path] = id.split('?', 2);
-
-      const obj = await fs.readFile(path, 'utf-8');
-
-      return `export default ${JSON.stringify(obj)};`;
     },
   };
 });
+
+function getCode(contents: string) {
+  return `
+    const obj = \`${contents}\`;
+    export default obj;
+  `;
+}
