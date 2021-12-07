@@ -79,4 +79,9 @@ dist
 
 # IDE
 .idea
-/*.d.ts
+
+/index.d.ts
+/nuxt.d.ts
+/rollup.d.ts
+/vite.d.ts
+/webpack.d.ts

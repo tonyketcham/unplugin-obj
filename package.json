@@ -53,13 +53,17 @@
       "require": "./dist/types.js",
       "import": "./dist/types.mjs"
     },
-    "./*": "./*"
+    "./*": "./*",
+    "./obj": {
+      "types": "./obj.d.ts"
+    }
   },
   "main": "dist/index.js",
   "module": "dist/index.mjs",
-  "types": "dist/index.d.ts",
+  "types": "index.d.ts",
   "files": [
     "dist",
+    "types",
     "*.d.ts"
   ],
   "scripts": {
@@ -92,7 +96,7 @@
     "rimraf": "^3.0.2",
     "rollup": "^2.56.3",
     "tsup": "^4.14.0",
-    "typescript": "^4.4.2",
+    "typescript": "^4.5",
     "vite": "^2.5.3",
     "webpack": "^5.51.2"
   }
