@@ -9,8 +9,6 @@ An [`.obj`](https://en.wikipedia.org/wiki/Wavefront_.obj_file) file import plugi
 Here's a simple example which imports an `.obj` file as a string then logs it to the console.
 
 ```ts
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
 import obj from './models/Lowpoly_tree_sample.obj';
 
 console.log(obj);
@@ -26,6 +24,20 @@ console.log(obj);
 pnpm i -D unplugin-obj
 ```
 
+## Types
+
+The most generally compatible way to add type definitions for `.obj` modules is via a `tsconfig.json` file.
+
+```json
+// tsconfig.json
+{
+  "compilerOptions:": {
+    ...
+    "types": ["unplugin-obj/obj"]
+  }
+}
+```
+
 ### Vite
 
 ```ts
@@ -35,6 +47,13 @@ import ObjFileImport from 'unplugin-obj/vite';
 export default defineConfig({
   plugins: [ObjFileImport()],
 });
+```
+
+Optional method to add types w/o `tsconfig`:
+
+```ts
+// vite-env.d.ts
+/// <reference types="unplugin-obj/obj" />
 ```
 
 Example: [`playground/`](./playground/)
