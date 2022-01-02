@@ -28,10 +28,10 @@ pnpm i -D unplugin-obj
 
 The most generally compatible way to add type definitions for `.obj` modules is via a `tsconfig.json` file.
 
-```json
+```js
 // tsconfig.json
 {
-  "compilerOptions:": {
+  "compilerOptions": {
     ...
     "types": ["unplugin-obj/obj"]
   }
